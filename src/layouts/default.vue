@@ -12,7 +12,7 @@
           <PhHouse weight="fill" size="24" />
         </NuxtLink>
         <div class="d-flex justify-content-end align-items-center w-100 h-100 gap-2">
-          <span class="badge bg-dark me-2">0.1.0</span>
+          <span class="badge bg-dark me-2">{{ appVersion }}</span>
           <PhGithubLogo weight="fill" size="24" />
           <div class="vr me-2"></div>
           <PhArrowsClockwise weight="fill" size="24" />
@@ -35,5 +35,7 @@
 
 <script setup>
 import { PhGithubLogo, PhHouse, PhArrowsClockwise } from '@phosphor-icons/vue';
+import { getVersion } from "@tauri-apps/api/app";
 
+const appVersion = await getVersion();
 </script>
