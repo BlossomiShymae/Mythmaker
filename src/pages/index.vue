@@ -14,14 +14,15 @@
     </div>
 
     <div class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="Search for a challenge..."/>
+      <input type="text" class="form-control" placeholder="Search for a challenge..."
+        v-model="search">
       <div class="input-group-append">
         <button class="btn btn-outline-light" type="button">Search</button>
       </div>
     </div>
     
     <div class="d-flex flex-wrap gap-3 w-100">
-      <div v-for="(value, key, index) in ranked" :key="index"
+      <div v-for="(value, key, index) in items" :key="index"
         class="d-flex gap-3 border border-top-0 border-end-0 border-bottom-0 border-3 border-light ps-2"
         style="width: 400px;"> 
         <div class="d-flex flex-column justify-contenter-center align-items-center gap-1" style="max-width: 80px">
@@ -61,4 +62,11 @@ const crystal = categories["0"];
 
 const summoner = await invoke("get_current_summoner") as any;
 const playerSummary = await invoke("get_local_player_summary") as any;
+
+const search = ref("");
+const items = computed(() => { 
+  if (!search.value) return ranked;
+
+  return ranked.filter(x => x.name.toLowerCase().includes(search.value.toLowerCase()));
+ });
 </script>
