@@ -35,7 +35,6 @@ pub struct StandardError {
 }
 
 impl StandardError {
-    // Doing this helps avoid allocations in the case on an error
     pub fn new(message: String) -> StandardError {
         StandardError { message }
     }
@@ -46,7 +45,6 @@ impl StandardError {
         }
     }
 
-    // This function is currently unused
     pub fn from_error(error: impl Error) -> StandardError {
         StandardError {
             message: error.to_string(),
@@ -54,7 +52,6 @@ impl StandardError {
     }
 }
 
-// Instead of using .map_err(), implementing from allows us of the `?` operator to do so automatically
 impl From<irelia::Error> for StandardError {
     fn from(value: irelia::Error) -> Self {
         StandardError {
@@ -71,7 +68,6 @@ impl fmt::Display for StandardError {
     }
 }
 
-// Instead of using .map_err(), implementing from allows us of the `?` operator to do so automatically
 impl From<StandardError> for String {
     fn from(value: StandardError) -> Self {
         value.message
