@@ -1,75 +1,52 @@
-# Nuxt 3 Minimal Starter
+# Mythmaker
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Mythmaker is a WIP viewer of local player challenges for League.
 
-## Setup
+## Contributors
 
-Make sure to install the dependencies:
+<a href="https://github.com/BlossomiShymae/Mythmaker/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=BlossomiShymae/Mythmaker" />
+</a>
 
-```bash
-# npm
-npm install
+## Preview
 
-# pnpm
-pnpm install
+![App preview](app-preview.png)
 
-# yarn
-yarn install
+## Development
 
-# bun
-bun install
-```
+Install packages:
 
-## Development Server
+`npm i`
 
-Start the development server on `http://localhost:3000`:
+Run tauri in development:
 
-```bash
-# npm
-npm run dev
+`npm run tauri dev`
 
-# pnpm
-pnpm run dev
+Compile installer:
 
-# yarn
-yarn dev
+`npm run tauri build`
 
-# bun
-bun run dev
-```
+## Credits
 
-## Production
+### irelia
 
-Build the application for production:
+An LCU binding crate created by AlsoSylv. Many thanks as always! 💜
+- [Repository](https://github.com/AlsoSylv/Irelia)
+- [crates.io](https://crates.io/crates/irelia)
 
-```bash
-# npm
-npm run build
 
-# pnpm
-pnpm run build
+### Needlework
 
-# yarn
-yarn build
+An open-source helper tool for the LCU.
+- [Respository](https://github.com/BlossomiShymae/Needlework)
 
-# bun
-bun run build
-```
+## Disclaimer
 
-Locally preview production build:
+THE PROGRAM IS PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION THE IMPLIED WARRANTIES OF MERCHANTABILITY, NONINFRINGMENT, OR OF FITNESS FOR A PARTICULAR PURPOSE. LICENSOR DOES NOT WARRANT THAT THE FUNCTIONS CONTAINED IN THE PROGRAM WILL MEET YOUR REQUIREMENTS OR THAT OPERATION WILL BE UNINTERRUPTED OR ERROR FREE. LICENSOR MAKES NO WARRANTIES RESPECTING ANY HARM THAT MAY BE CAUSED BY MALICIOUS USE OF THIS SOFTWARE. LICENSOR FURTHER EXPRESSLY DISCLAIMS ANY WARRANTY OR REPRESENTATION TO AUTHORIZED USERS OR TO ANY THIRD PARTY.
 
-```bash
-# npm
-npm run preview
 
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Mythmaker isn't endorsed by Riot Games and doesn't
+reflect the views or opinions of Riot Games or anyone officially
+involved in producing or managing Riot Games properties. Riot Games,
+and all associated properties are trademarks or registered
+trademarks of Riot Games, Inc.
